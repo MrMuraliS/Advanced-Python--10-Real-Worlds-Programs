@@ -16,7 +16,6 @@ class PdfReport:
         self.filename = filename
 
     def generate(self, flatmate1, flatmate2, bill):
-
         flatmate1_pay = str(round(flatmate1.pays(bill, flatmate2), 2))
         flatmate2_pay = str(round(flatmate2.pays(bill, flatmate1), 2))
 
@@ -58,5 +57,5 @@ class FileSharer:
 
     def share(self):
         client = Client(self.api_key)
-        new_filelink = client.upload(filepath=self.filepath)
-        return new_filelink.url
+        new_fileline = client.upload(filepath=self.filepath)
+        return new_fileline.url
